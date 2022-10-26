@@ -29,7 +29,7 @@ router.get("/add", (req, res) => {
 
 router.post("/add", (req, res) => {
     var babytoy = new ToyModel(req.body);
-    toy.save((err) => {
+    babytoy.save((err) => {
         if (!err) {
             console.log("Add toy succeed !");
             res.redirect("/toy");
