@@ -1,12 +1,6 @@
 <h1 class="contain text-center mt-3">All product </h1>
- <th colspan="4">
-         <select class="form-control" onchange="window.location.href=this.value">
-            <option value="">Sort by name</option>
-            <option value="/toy/sort/asc">Ascending</option>
-            <option value="/toy/sort/desc">Descending</option>
-         </select>
-      </th>
-<div class="row row-cols-1 row-cols-md-5 g-4 mt-5">
+
+<div class="row row-cols-1 row-cols-md-6 g-4 mt-5">
     {{#each kidtoys}}
   <div class="col">
     <div class="card">
@@ -16,7 +10,7 @@
       <div class="card-body">
         <h5 class="card-title">{{name}}</h5>
         <p class="card-text">Price: $ {{price}}</p>
-        <button type="button" class="btn btn-success">Buy now</button>
+        <button type="button" class="btn btn-success">Add to cat</button>
       </div>
     </div>
   </div>

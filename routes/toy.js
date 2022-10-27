@@ -79,32 +79,32 @@ router.get("/detail/:id", (req, res) => {
         }
     });
 });
-router.post('/search', (req, res) => {
-    ToyModel.find({ name: new RegExp(req.body.name, "i") }, (err, data) => {
-        if (!err) {
-            res.render('toy/index', { kidtoys: data })
-        }
-    })
-})
+// router.post('/search', (req, res) => {
+//     ToyModel.find({ name: new RegExp(req.body.name, "i") }, (err, data) => {
+//         if (!err) {
+//             res.render('toy/index', { kidtoys: data })
+//         }
+//     })
+// })
 
 //sort function
-router.get('/sort/asc', (req, res) => {
-    ToyModel.find()
-        .sort({ name: 1 })
-        .exec((err, data) => {
-            if (!err) {
-                res.render('toy/list', { kidtoys: data })
-            }
-        })
-})
-router.get('/sort/desc', (req, res) => {
-    ToyModel.find()
-        .sort({ name: -1 })
-        .exec((err, data) => {
-            if (!err) {
-                res.render('toy/list', { kidtoys: data })
-            }
-        })
-})
+// router.get('/sort/asc', (req, res) => {
+//     ToyModel.find()
+//         .sort({ name: 1 })
+//         .exec((err, data) => {
+//             if (!err) {
+//                 res.render('toy/list', { kidtoys: data })
+//             }
+//         })
+// })
+// router.get('/sort/desc', (req, res) => {
+//     ToyModel.find()
+//         .sort({ name: -1 })
+//         .exec((err, data) => {
+//             if (!err) {
+//                 res.render('toy/list', { kidtoys: data })
+//             }
+//         })
+// })
 
 module.exports = router;
