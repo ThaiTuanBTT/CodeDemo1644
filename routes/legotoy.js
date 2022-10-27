@@ -28,11 +28,13 @@ router.get("/add", (req, res) => {
 });
 
 router.post("/add", (req, res) => {
-    var toy = new LegotoyModel(req.body);
+    var legotoy = new LegotoyModel(req.body);
     legotoy.save((err) => {
         if (!err) {
             console.log("Add toy succeed !");
             res.redirect("/legotoy");
+        } else {
+            console.log(err)
         }
     });
 });
@@ -79,4 +81,5 @@ router.get("/detail/:id", (req, res) => {
         }
     });
 });
+
 module.exports = router;

@@ -12,4 +12,5 @@ var LegotoySchema = new mongoose.Schema({
 
 //Note: tham số cuối cùng bắt buộc phải là tên của collection (table) trong DB
 var LegotoyModel = mongoose.model('Legotoy', LegotoySchema, 'legotoy')
+
 module.exports = LegotoyModel
